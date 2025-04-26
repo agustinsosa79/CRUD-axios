@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>CRUD API REST AJAX</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<h1>CRUD API REST AXIOS</h1>
+
+<section class="crud">
+
+    <!-- Artículo para agregar titanes -->
+    <article>
+    <h2 class="crud-title">Agregar titán</h2>
+    <form class="crud-form">
+        <input type="text" name="nombre" placeholder="Nombre del titán"><br>
+        <input type="text" name="poder" placeholder="Poder del titán"><br>
+        <input type="submit" value="Enviar">
+        <input type="hidden" name="id">
+    </form>
+    </article>
+    <article>
+    <h2>Ver Titanes</h2>
+    <table class="crud-table">
+        <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Poder</th>
+            <th>Acciones</th>
+        </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    </article>
+</section>
+<template class="crud-template">
+    <tr>
+        <td class="name"></td>
+        <td class ="poder"></td>
+        <td>
+            <button class="edit">Editar</button>
+            <button class="delete">Eliminar</button>
+        </td>
+    </tr>
+</template>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="./crud_axios.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+{
+  "titanes": [
+    {
+      "nombre": "titan fundadora",
+      "poder": "La primer titan",
+      "id": "1"
+    },
+    {
+      "id": "3",
+      "nombre": "Titan Colosal",
+      "poder": "Altura colosal, radio de quemaduras"
+    },
+    {
+      "id": "4",
+      "nombre": "Titan Acorazado",
+      "poder": "Cuerpo resistente"
+    },
+    {
+      "id": "5",
+      "nombre": "Titan Mandibula",
+      "poder": "Mordida muy fuerte"
+    },
+    {
+      "id": "7",
+      "nombre": "Titan Fundador",
+      "poder": "Controla todos los titanes"
+    },
+    {
+      "id": "8",
+      "nombre": "Titan Martillo",
+      "poder": "Crear cosas con material reofrzado"
+    },
+    {
+      "id": "9",
+      "nombre": "Titan Carguero",
+      "poder": "Cargar cosas y ser agil"
+    },
+    {
+      "id": "10",
+      "nombre": "titan cambiante",
+      "poder": "De humano a titan"
+    }
+  ]
+}

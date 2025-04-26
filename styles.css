@@ -1,0 +1,195 @@
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+    :root {
+    --bg: #0f0f0f;
+    --surface: #1a1a1a;
+    --surface-hover: #222222;
+    --accent: #00ffae;
+    --accent-hover: #00e39c;
+    --danger: #ff4d4d;
+    --text: #ffffff;
+    --text-muted: #aaaaaa;
+    --radius: 1rem;
+    --shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    --font: 'Inter', sans-serif;
+    }
+
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+
+    html {
+    scroll-behavior: smooth;
+    }
+
+    body {
+    font-family: var(--font);
+    background-color: var(--bg);
+    color: var(--text);
+    padding: 2rem 1rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+
+    h1 {
+    font-size: 2.5rem;
+    color: var(--accent);
+    margin-bottom: 2.5rem;
+    text-align: center;
+    letter-spacing: 1px;
+    }
+
+    .crud {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    }
+
+    article {
+    background: var(--surface);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 2rem;
+    transition: background 0.3s;
+    }
+
+    article:hover {
+    background: var(--surface-hover);
+    }
+
+    .crud-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--text);
+    }
+
+    .crud-form input[type="text"],
+    .crud-form input[type="submit"] {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    margin-bottom: 1rem;
+    border-radius: var(--radius);
+    font-size: 1rem;
+    background-color: #2b2b2b;
+    color: var(--text);
+    transition: all 0.3s ease;
+    }
+
+    .crud-form input[type="text"]:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--accent);
+    background-color: #333;
+    }
+
+    .crud-form input[type="submit"] {
+    background: var(--accent);
+    color: #000;
+    font-weight: 600;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    }
+
+    .crud-form input[type="submit"]:hover {
+    background: var(--accent-hover);
+    }
+
+    table.crud-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+    overflow-x: auto;
+    }
+
+    .crud-table thead {
+    background-color: #2a2a2a;
+    }
+
+    .crud-table th,
+    .crud-table td {
+    text-align: left;
+    padding: 1rem;
+    border-bottom: 1px solid #333;
+    }
+
+    .crud-table th {
+    color: var(--accent);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+    }
+
+    .crud-table td button {
+    padding: 0.5rem 1rem;
+    margin-right: 0.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    margin: 5px;
+    }
+
+    button.edit {
+    background-color: var(--accent);
+    color: #000;
+    }
+
+    button.edit:hover {
+    background-color: var(--accent-hover);
+    }
+
+    button.delete {
+    background-color: var(--danger);
+    color: #fff;
+    }
+
+    button.delete:hover {
+    background-color: #cc0000;
+    }
+
+    /* Responsive Table Stack */
+    @media (max-width: 600px) {
+    table.crud-table,
+    table.crud-table thead,
+    table.crud-table tbody,
+    table.crud-table th,
+    table.crud-table td,
+    table.crud-table tr {
+        display: block;
+        width: 100%;
+    }
+
+    table.crud-table thead {
+        display: none;
+    }
+
+    table.crud-table tr {
+        margin-bottom: 1.5rem;
+        background-color: #1a1a1a;
+        padding: 1rem;
+        border-radius: var(--radius);
+    }
+
+    table.crud-table td {
+        padding: 0.8rem 0;
+        display: flex;
+        justify-content: space-between;
+        border: none;
+        border-bottom: 1px solid #2b2b2b;
+    }
+
+    table.crud-table td::before {
+        content: attr(class);
+        font-weight: bold;
+        color: var(--text-muted);
+        text-transform: capitalize;
+    }
+    }
