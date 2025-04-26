@@ -7,6 +7,9 @@ const d = document
 
 
     const getAll = async () => {
+
+        $table.querySelector("tbody").innerHTML = '';
+        
         try {
             let res = await axios.get("https://680c46912ea307e081d39732.mockapi.io/titanes"),
                 json = await res.data
