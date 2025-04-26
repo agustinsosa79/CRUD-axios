@@ -8,7 +8,7 @@ const d = document
 
     const getAll = async () => {
         try {
-            let res = await axios.get("http://localhost:3000/titanes"),
+            let res = await axios.get("https://680c46912ea307e081d39732.mockapi.io/titanes"),
                 json = await res.data
 
             json.forEach(el => {
@@ -52,7 +52,7 @@ const d = document
                         })
                     }
 
-                    let res = await axios("http://localhost:3000/titanes", options)
+                    let res = await axios("https://680c46912ea307e081d39732.mockapi.io/titanes", options)
                         json = await res.data
 
                     location.reload()
@@ -74,7 +74,7 @@ const d = document
                         })
                     };
 
-                    let res = await axios(`http://localhost:3000/titanes/${e.target.id.value}`, options);
+                    let res = await axios(`https://680c46912ea307e081d39732.mockapi.io/titanes/${e.target.id.value}`, options);
                         json = await res.data;
 
                     location.reload()
@@ -106,7 +106,7 @@ const d = document
                         }
                     };
 
-                    let res = await axios(`http://localhost:3000/titanes/${e.target.dataset.id}`, options);
+                    let res = await axios(`https://680c46912ea307e081d39732.mockapi.io/titanes/${e.target.dataset.id}`, options);
                     let json = await res.data;
 
                     getAll();
